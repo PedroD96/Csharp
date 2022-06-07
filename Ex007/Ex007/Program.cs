@@ -43,21 +43,20 @@ namespace Ex007
 
             Console.Write("\nEntre um valor para depósito: ");
 
-            valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            c.Deposito(valor);
+            double deposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            conta.Deposito(deposito);
             //to.string --> dados da conta
-            Console.WriteLine("\nDados da conta atualizados: " + c.ToString());
+            Console.WriteLine("\nDados da conta atualizados: " + conta);
 
 
 
 
             Console.Write("\nEntre um valor para saque: ");
 
-            valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            c.Sacar(valor);
-
+            double saque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            conta.Saque(saque);
             //to.string --> dados da conta + -R$5,00
-            Console.WriteLine("\nDados da conta atualizados: " + c.ToString());
+            Console.WriteLine("\nDados da conta atualizados: " + conta);
         }
     }
 }
